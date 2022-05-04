@@ -1,0 +1,25 @@
+body{
+    background-color: rgba(229, 182, 196, 0.145);
+}
+h1{
+    color:#95586cfc
+}
+p{
+    color:rgb(78, 44, 44)
+}
+ul{
+    color:rgb(78, 44, 44)
+}
+img{
+    float: left;
+    padding: 25px;
+}
+a:link{
+    color:rgb(64, 30, 30)
+}
+a:visited{
+    color:rgb(134, 82, 82)
+}
+a:hover{
+    color:red;
+}

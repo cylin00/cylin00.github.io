@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="./71cat.png" type="image/cats_icon" />
+        <title>Chinying's Profile</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <audio controls autoplay>
+            <source src="71music.mp3">
+        </audio>
+        <img src="71photo.jpg" style="width:208px;height:312px;">
+        <h1>Chinying's Profile</h1>
+        <p>嗨！大家好我是林沁穎。高中畢業於
+            <a href="https://tcgs.tc.edu.tw/">台中女中</a>
+            ，現在就讀
+            <a href="https://web.ee.ntu.edu.tw/">台大電機系</a>
+            的一年級。
+            <br>
+            <ul>我的興趣們 ᐧ ﻌ ᐧ 
+                <li>滑<a href="https://zh.wikipedia.org/wiki/Instagram">Instagram</a></li>
+                <li>去<a href="https://www.facebook.com/BCmidnightcafe/">咖啡廳</a>讀書</li>
+                <li>看著<a href="https://unsplash.com/s/photos/sky">好看的天空</a>發呆</li>
+            </ul>
+            
+        </p>
+        <div class="clock">
+            <p>Date/Time: <span class="time"></span></p>
+        </div>
+        <script>
+            var time = document.querySelector(".time");
+
+            function updateClock(){
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+                var date = now.getDate();
+                var month = now.getMonth()+1;
+                var year = now.getFullYear();
+
+                hours = hours%12 || 12;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                date = date <10 ? "0" + date : date;
+
+                time.innerHTML = 
+                month +
+                    "-" +
+                    date +
+                    "-" +
+                    year +
+                    " " +
+                    hours +
+                    ":" +
+                    minutes +
+                    ":" +
+                    seconds;
+                    
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        </script>
+    </body>
+</html>
